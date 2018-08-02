@@ -13,6 +13,7 @@ client.onreadystatechange = function() {
         ['strikethrough', true],
         ['tables', true],
         ['tasklists', true],
+        ['parseImgDimensions', true],
     ];
     options.forEach((pair)=>converter.setOption(pair[0] ,pair[1]));
     var html      = converter.makeHtml(text);
