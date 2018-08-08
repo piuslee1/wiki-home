@@ -1,9 +1,7 @@
 pages:
   stage: deploy
   script:
-  - mkdir public
-  - cd public
-  - wget https://raw.githubusercontent.com/Yonder-Dynamics/wiki-common/master/build_wiki.sh | bash
+  - wget https://raw.githubusercontent.com/Yonder-Dynamics/wiki-common/master/build_wiki.py | python - public README.md
   artifacts:
     paths:
     - public
