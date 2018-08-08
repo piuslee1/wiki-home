@@ -2,7 +2,9 @@ pages:
   stage: deploy
   script:
   - mkdir .public
-  - cp -r wiki/* .public
+  - cd .public
+  - wget https://raw.githubusercontent.com/Yonder-Dynamics/wiki-common/master/index.html
+  - cd ..
   - mv .public public
   artifacts:
     paths:
